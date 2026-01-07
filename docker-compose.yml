@@ -1,0 +1,19 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: movie_vector_db
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  default:
+    name: recsys-network

@@ -1,0 +1,21 @@
+# Secretos y Configuración
+.env
+
+# Entornos Virtuales
+.venv/
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datos (Opcional: decide si quieres subir tu JSON o no)
+# data/art_collection.json
+
+# Sistema
+.DS_Store
+Thumbs.db

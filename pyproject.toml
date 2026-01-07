@@ -1,0 +1,24 @@
+[project]
+name = "movie-recsys-pro"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Darkslidex",email = "felixvenezuela@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "fastapi (>=0.128.0,<0.129.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "google-genai (>=1.56.0,<2.0.0)",
+    "qdrant-client (>=1.16.2,<2.0.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+    "tqdm (>=4.67.1,<5.0.0)",
+    "streamlit (>=1.52.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
