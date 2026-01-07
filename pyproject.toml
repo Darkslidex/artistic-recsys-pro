@@ -2,10 +2,9 @@
 name = "movie-recsys-pro"
 package-mode = false
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Darkslidex",email = "felixvenezuela@gmail.com"}
-]
+description = "Buscador Semántico Multimodal"
+authors = ["Felix Lezama"]
+package-mode = false
 readme = "README.md"
 requires-python = "^3.11"
 dependencies = [
