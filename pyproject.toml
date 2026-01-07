@@ -1,6 +1,5 @@
 [project]
 name = "movie-recsys-pro"
-package-mode = false
 version = "0.1.0"
 description = "Buscador Semántico Multimodal"
 authors = ["Felix Lezama"]
