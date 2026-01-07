@@ -9,6 +9,12 @@ from src.shared.config import setup_logging
 
 def ejecutar_ingesta_masiva():
     setup_logging()
+
+    # --- NUEVA LÍNEA PARA CREAR LA COLECCIÓN ---
+    # Gemini text-embedding-004 usa 768 dimensiones
+    logger.info("Verificando colección en la nube...")
+    vector_db.create_collection(collection_name="peliculas_test", vector_size=768)
+    # -------------------------------------------
     
     # 1. Cargar el "Lienzo" de datos
     try:
