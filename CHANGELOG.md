@@ -1,6 +1,25 @@
-# CHANGELOG
+# Changelog
 
 Toda la posteridad de este proyecto será registrada aquí bajo el estándar de "Keep a Changelog".
+
+## [1.0.0] - 2026-01-07
+
+### Added
+- **Infraestructura Cloud Native:** Migración completa de base de datos vectorial de un entorno local (Docker) a un cluster gestionado en **Qdrant Cloud**.
+- **Despliegue Continuo (CD):** Implementación de hosting en la nube mediante **Streamlit Community Cloud** con sincronización automática desde GitHub.
+- **Gestión de Secretos:** Configuración de variables de entorno seguras en la plataforma de despliegue para el manejo de API Keys.
+
+### Changed
+- **Arquitectura de Configuración:** Actualización a **Pydantic V2**, sustituyendo `class Config` por `SettingsConfigDict` para cumplir con los estándares modernos de validación.
+- **Conector de Base de Datos:** Rediseño de la clase `VectorStorage` para soportar conexiones híbridas (Local/Nube) mediante detección inteligente de API Keys y forzado de protocolo HTTPS/REST.
+- **Optimización de Poetry:** Configuración de `package-mode = false` para permitir instalaciones limpias en entornos de despliegue que no requieren la raíz como paquete.
+
+### Fixed
+- **Errores de Conectividad SSL:** Solución a fallos de handshake y gRPC mediante el ajuste de parámetros de conexión en la SDK de Qdrant.
+- **Conflictos de Dependencias:** Resolución de incompatibilidades de versiones entre Python 3.13, `qdrant-client` y `pydantic-settings`.
+- **Sintaxis TOML:** Corrección de errores de duplicación de claves en `pyproject.toml` que bloqueaban el despliegue.
+
+---
 
 ## [0.3.0] - 2026-01-07
 
@@ -16,6 +35,7 @@ Toda la posteridad de este proyecto será registrada aquí bajo el estándar de 
 ### Fixed
 - **Percepción de Acierto:** Ajuste de los umbrales de confianza para eliminar el "ruido" semántico y resaltar las coincidencias conceptuales más fuertes.
 
+---
 
 ## [0.2.2] - 2026-01-06
 
@@ -29,6 +49,7 @@ Toda la posteridad de este proyecto será registrada aquí bajo el estándar de 
 ### Changed
 - **Pipeline de Ingesta:** Optimización del proceso de carga masiva utilizando la librería `tqdm` para monitorización de progreso en tiempo real y generación de IDs únicos basados en el contenido (UUID5).
 
+---
 
 ## [0.2.1] - 2026-01-06
 
@@ -40,6 +61,7 @@ Toda la posteridad de este proyecto será registrada aquí bajo el estándar de 
 - **Visualización de Resultados:** Mejora en la interfaz de terminal del buscador para incluir el nombre del artista/director y el género, enriqueciendo la experiencia de usuario.
 - **Formateo de Salida:** Implementación de separadores visuales y centrado de texto en los resultados de búsqueda para una lectura más clara.
 
+---
 
 ## [0.2.0] - 2026-01-06
 
@@ -52,6 +74,7 @@ Toda la posteridad de este proyecto será registrada aquí bajo el estándar de 
 - **Actualización de API Qdrant:** Migración del método deprecado `client.search()` al nuevo estándar `client.query_points()` para compatibilidad con la SDK 2026.
 - **Manejo de Resultados:** Ajuste en la estructura de desempaquetado de puntos para procesar la nueva respuesta `.points` de Qdrant.
 
+---
 
 ## [0.1.0] - 2026-01-06
 
